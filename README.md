@@ -26,12 +26,6 @@ sqlite3-xenode
 * msg.context: {:sqlite3_node=>{"PurchaseOrderNumber"=>"|ponum|", "OrderDate"=>"|odate|", "PartNumber"=>"|pnum|", "ProductName"=>"|pname|", "Quantity"=>"|qty|", "USPrice"=>"|price|", "ShipDate"=>"|sdate|", "ShipMethod"=>"|smethod|", "Comment"=>"|comment|", "ArrivalDate"=>"|adate|"}}
 * msg.data: [{"PurchaseOrderNumber"=>"99503", "OrderDate"=>"2013-03-10", "PartNumber"=>"872-AA", "ProductName"=>"Lawnmower", "Quantity"=>50, "USPrice"=>148.95, "ShipDate"=>"2013-03-11", "ShipMethod"=>"AIR", "Comment"=>"Confirm Order by 2013-03-10", "ArrivalDate"=>"2013-05-11"}, {"PurchaseOrderNumber"=>"23567", "OrderDate"=>"2013-03-14", "PartNumber"=>"17-A6-23", "ProductName"=>"Particle Cannon", "Quantity"=>3, "USPrice"=>1948628.95, "ShipDate"=>"2013-03-16", "ShipMethod"=>"SEA", "Comment"=>"Confirm Order by 2013-03-15", "ArrivalDate"=>"2013-03-16"}]
 
-###Example Run Command:###
-* $ bin/xeno run xenode -i sqlite -f sqlite3_node -k SQLite3Node
-* $ bin/xeno write message -i sqlite -f xenode_lib/sqlite3_node/test_data/sqlite3_write_message.yml
-* $ sqlite3 run/tmp/databases/Shipping.db 
-* $ SELECT * FROM Shipping;
-   
 ### Example Output:###
 * SQL Statement: INSERT INTO Shipping VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  #Data: ["99503", "2013-03-10", "872-AA", "Lawnmower", 50, 148.95, "2013-03-11", "AIR", "Confirm Order by 2013-03-10", "2013-05-11"]
 * SQL Statement: INSERT INTO Shipping VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  #Data: ["23567", "2013-03-14", "17-A6-23", "Particle Cannon", 3, 1948628.95, "2013-03-16", "SEA", "Confirm Order by 2013-03-15", "2013-03-16"]
