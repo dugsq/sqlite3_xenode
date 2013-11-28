@@ -2,10 +2,6 @@
 # Licensed under the Open Software License version 3.0
 # http://opensource.org/licenses/OSL-3.0
 
-# gem sqlite3 (1.3.7)
-require 'sqlite3'
-
-#
 # @version 0.1.0
 #
 # SQLite3 Xenode listens for values to substitute into a SQL statement. 
@@ -59,6 +55,9 @@ require 'sqlite3'
 #   SQL Results: [[], []] # INSERT statements don't return anything from the database. If there is no output then msg.data gets left alone.
 #   msg.data being sent to children: [{"PurchaseOrderNumber"=>"99503", "OrderDate"=>"2013-03-10", "PartNumber"=>"872-AA", "ProductName"=>"Lawnmower", "Quantity"=>50, "USPrice"=>148.95, "ShipDate"=>"2013-03-11", "ShipMethod"=>"AIR", "Comment"=>"Confirm Order by 2013-03-10", "ArrivalDate"=>"2013-05-11"}, {"PurchaseOrderNumber"=>"23567", "OrderDate"=>"2013-03-14", "PartNumber"=>"17-A6-23", "ProductName"=>"Particle Cannon", "Quantity"=>3, "USPrice"=>1948628.95, "ShipDate"=>"2013-03-16", "ShipMethod"=>"SEA", "Comment"=>"Confirm Order by 2013-03-15", "ArrivalDate"=>"2013-03-16"}]
 #
+
+require 'sqlite3'
+
 class SQLite3Xenode
   include XenoCore::XeodeBase
 
