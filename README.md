@@ -29,5 +29,4 @@ SQLite3 Xenode
 ### Example Output:###
 * SQL Statement: INSERT INTO Shipping VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  #Data: ["99503", "2013-03-10", "872-AA", "Lawnmower", 50, 148.95, "2013-03-11", "AIR", "Confirm Order by 2013-03-10", "2013-05-11"]
 * SQL Statement: INSERT INTO Shipping VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  #Data: ["23567", "2013-03-14", "17-A6-23", "Particle Cannon", 3, 1948628.95, "2013-03-16", "SEA", "Confirm Order by 2013-03-15", "2013-03-16"]
-* SQL Results: [[], []] # INSERT statements don't return anything from the database. If there is no output then msg.data gets left alone.
 * msg.data: [{"PurchaseOrderNumber"=>"99503", "OrderDate"=>"2013-03-10", "PartNumber"=>"872-AA", "ProductName"=>"Lawnmower", "Quantity"=>50, "USPrice"=>148.95, "ShipDate"=>"2013-03-11", "ShipMethod"=>"AIR", "Comment"=>"Confirm Order by 2013-03-10", "ArrivalDate"=>"2013-05-11"}, {"PurchaseOrderNumber"=>"23567", "OrderDate"=>"2013-03-14", "PartNumber"=>"17-A6-23", "ProductName"=>"Particle Cannon", "Quantity"=>3, "USPrice"=>1948628.95, "ShipDate"=>"2013-03-16", "ShipMethod"=>"SEA", "Comment"=>"Confirm Order by 2013-03-15", "ArrivalDate"=>"2013-03-16"}]
