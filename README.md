@@ -1,4 +1,4 @@
-sqlite3-xenode
+SQLite3 Xenode
 =============
 
 **SQLite3 Xenode** listens for values to substitute into a SQL statement. This Xenode only works with SQLite3 and requires the "sqlite3" RubyGem. SQL Templates and a SQLite3 database are required to run this Xenode. There are sample templates and databases in their respective directories. The SQLite Xenode processes a message containing an array of hashes where each hash is a row. After executing the SQL statement, the xenode will write the output from the database to its children. If there was no output, it passes the message data to its children as it comes in. SQL Templates can have custom tokens in them which will get replaced by the message context and data that gets passed in. SQL Templates do not necessarily need to have the custom tokens; simply don't include the ~~ after the SQL statement.
